@@ -16,17 +16,23 @@ QuantumLeap: Servicio de almacenamiento histórico de eventos y datos temporales
 docker-compose.yml → Configuración de los servicios y contenedores.
 
 dags/ → Directorio con los DAGs de Airflow. 
-        Scripts:
-            - AEMET.py: Accede a los datos de la AEMET via API y los descarga
-            - Copernicus.py: Accede a los datos de copernicus de la província de Valencia via CDSAPI de python
-            - Flujo_Copernicus_orion.py: DAG que accede a los datos de copernicus via API, los registra el IoT Agent y los almacena el context broker Orion LD
-            - Flujo_copernicus_orion_quantumleap.py: Dag anterior pero mejorada al tener quantumleap para almacenar datos históricos mediante CrateDB (Se recomienda lanzar esta DAG)
+
+Scripts:
+
+- AEMET.py: Accede a los datos de la AEMET via API y los descarga
+
+- Copernicus.py: Accede a los datos de copernicus de la província de Valencia via CDSAPI de python
+
+- Flujo_Copernicus_orion.py: DAG que accede a los datos de copernicus via API, los registra el IoT Agent y los almacena el context broker Orion LD
+
+- Flujo_copernicus_orion_quantumleap.py: Dag anterior pero mejorada al tener quantumleap para almacenar datos históricos mediante CrateDB (Se recomienda lanzar esta DAG)
 
 🔹 Cómo levantar el entorno
 
 Clonar el repositorio:
 
 git clone https://github.com/PGTEC-VRAIN/Entorno-AirFlow_IotAgent_OrionLD_QuantumLeap.git
+
 cd Entorno-AirFlow_IotAgent_OrionLD_QuantumLeap
 
 Para levantar los contenedores:
@@ -34,6 +40,7 @@ Para levantar los contenedores:
 docker-compose up -d --build
 
 La opción --build se usa solamente si se modificado el yaml
+
 La opción -d se usa para evitar generar los logs en la terminal
 
 Se recomienda usar "docker ps" para ver el estado de los contenedores
