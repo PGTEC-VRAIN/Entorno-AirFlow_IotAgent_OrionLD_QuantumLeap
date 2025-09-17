@@ -1,0 +1,41 @@
+services:
+  mongo-db:
+    image: mongo:4.4
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  orion-ld:
+    image: quay.io/fiware/orion-ld:latest
+    container_name: orion-ld
+    depends_on:
+      - mongo-db
+    ports:
+      - "1026:1026"
+    command: -dbhost mongo-db -logLevel DEBUG
+
+  iot-agent-json:
+    image: fiware/iotagent-json:latest
+    container_name: iot-agent-json
+    depends_on:
+      - mongo-db
+      - orion-ld
+    ports:
+      - "4041:4041"
+    environment:
+      IOTA_CB_HOST: orion-ld
+      IOTA_CB_PORT: 1026
+      IOTA_NORTH_PORT: 4041
+      IOTA_LOG_LEVEL: DEBUG
+      IOTA_DEFAULT_RESOURCE: /iot/json
+      IOTA_DEFAULT_TRANSPORT: HTTP
+      IOTA_CB_URL: http://orion-ld:1026
+      IOTA_REGISTRY_TYPE: mongodb
+      IOTA_MONGO_HOST: mongo-db
+      IOTA_MONGO_PORT: 27017
+
+volumes:
+  mongo-data:
+

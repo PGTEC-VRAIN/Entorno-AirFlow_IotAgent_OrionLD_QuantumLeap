@@ -1,0 +1,32 @@
+        ┌──────────────────┐
+        │   Script Python   │
+        │  (Airflow DAG)    │
+        └───────┬───────────┘
+                │
+                │ 1. Descarga datos de Copernicus (CDS API)
+                │ 2. Extrae temperatura en °C
+                │
+                ▼
+        ┌──────────────────┐
+        │   IoT Agent UL   │
+        │ (http://:7896)   │
+        └───────┬───────────┘
+                │
+                │ 3. Recibe payload UltraLight  
+                │    Ej: `t|23.5`
+                │
+                │ Traduce → NGSI-v2
+                ▼
+        ┌──────────────────┐
+        │   Orion-LD       │
+        │ (http://:1026)   │
+        └───────┬───────────┘
+                │
+                │ 4. Actualiza entidad NGSI
+                │    urn:ngsi-ld:Device:001
+                │    temperature: 23.5
+                ▼
+        ┌──────────────────┐
+        │   MongoDB        │
+        │ (Datos persist.) │
+        └──────────────────┘
