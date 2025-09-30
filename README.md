@@ -85,7 +85,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://pgtec.webs.upv.es/images/satelital_DANA.png)
+[![Platform for the Management of Early Prevention of Climate Emergencies][product-screenshot]](./images/proyecto.png)
 
 This repository is part of the tasks of the <a href="https://pgtec.webs.upv.en/">PGTEC</a> project.
 Its main objective is to describe and provide the infrastructure required to deploy a data space using <a href="">FIWARE</a> technology, offering a detailed and easy-to-follow guide for different environments.
@@ -93,7 +93,6 @@ Its main objective is to describe and provide the infrastructure required to dep
 The project includes the configuration of the infrastructure based on Docker cluster, the installation and configuration of the core FIWARE components (Airflow, IoT Agent, Orion-LD, QuantumLeap), and the integration with external climate and weather data sources to enable standardized data ingestion, real-time context management, and historical storage for predictive analytics.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -111,10 +110,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Tested on
+<div align="center">
   | <!-- -->                                  | 
   |:-----------------------------------------:|
   | [![Ubuntu 24.04.1 LTS][ubuntu]][ubuntu-url]  | 
@@ -221,7 +218,7 @@ Follow the next steps:
 
 1. Get a free Copernicus Climate Data Store API Key at [Copernicus Climate Data Store](https://accounts.ecmwf.int/auth/realms/ecmwf/protocol/openid-connect/auth?client_id=cds&scope=openid%20email&response_type=code&redirect_uri=https%3A%2F%2Fcds.climate.copernicus.eu%2Fapi%2Fauth%2Fcallback%2Fkeycloak&state=Xg5O4h6pHkITloRNwM5IoSGizKWVJdZZWFjve1aYvRA&code_challenge=sQXDzVNLTvWQw-UYP30kS46kCP0d9j06JF2xmBy5KgY&code_challenge_method=S256)
 
-![Copernicus Climate Data Store](image.png)
+![Copernicus Climate Data Store](./images/copernicus.png)
 
 2. Clone the repository
    ```sh
@@ -257,14 +254,15 @@ Follow the next steps:
 
     [Airflow Dashboard](http://localhost:8080)
 
-    ![alt text](image-1.png)
+    ![Airflow](./images/airflow.png)
 
 8. Check CrateDB to get historical data
     _You may create an account first_
 
     [CrateDB Dashboard](http://localhost:4200)
 
-    ![alt text](image-2.png)
+    ![CrateDB](./images/cratedb.png)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
 9. Shut down the docker 
@@ -288,7 +286,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 -->
 
 
-<!-- CONTRIBUTING -->
+<!-- CONTRIBUTING 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -301,7 +299,8 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
+-->
+<!---
 ### Top contributors:
 
 <a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
@@ -343,35 +342,6 @@ Project Link: [https://github.com/PGTEC-VRAIN](https://github.com/PGTEC-VRAIN)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
 [Python]: https://img.shields.io/badge/python-3.10+-blue.svg?logo=python&logoColor=white
 [Python-url]: https://www.python.org/
 [Airflow]: https://img.shields.io/badge/airflow-2.x-darkblue.svg?logo=apacheairflow&logoColor=white

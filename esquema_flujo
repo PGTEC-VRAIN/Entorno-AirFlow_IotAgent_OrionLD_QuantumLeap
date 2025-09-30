@@ -1,32 +1,40 @@
-        ┌──────────────────┐
-        │   Script Python   │
-        │  (Airflow DAG)    │
-        └───────┬───────────┘
-                │
-                │ 1. Descarga datos de Copernicus (CDS API)
-                │ 2. Extrae temperatura en °C
-                │
-                ▼
-        ┌──────────────────┐
-        │   IoT Agent UL   │
-        │ (http://:7896)   │
-        └───────┬───────────┘
-                │
-                │ 3. Recibe payload UltraLight  
-                │    Ej: `t|23.5`
-                │
-                │ Traduce → NGSI-v2
-                ▼
-        ┌──────────────────┐
-        │   Orion-LD       │
-        │ (http://:1026)   │
-        └───────┬───────────┘
-                │
-                │ 4. Actualiza entidad NGSI
-                │    urn:ngsi-ld:Device:001
-                │    temperature: 23.5
-                ▼
-        ┌──────────────────┐
-        │   MongoDB        │
-        │ (Datos persist.) │
-        └──────────────────┘
+┌──────────────────┐
+│   Script Python   │
+│  (Airflow DAG)    │
+└───────┬───────────┘
+        │
+        │ 1. Descarga datos de Copernicus (CDS API)
+        │ 2. Extrae temperatura, lat, lon, hora
+        ▼
+┌──────────────────┐
+│   IoT Agent UL   │
+│ (http://iot-agent:7896) │
+└───────┬───────────┘
+        │
+        │ 3. Recibe payload UltraLight  
+        │    Ej: `t|23.5|lat|lon|h|18:30`
+        │
+        │ Traduce → NGSI-v2 (JSON)
+        ▼
+┌──────────────────┐
+│   Orion-LD       │
+│ (http://orion-ld:1026) │
+└───────┬───────────┘
+        │
+        │ 4. Actualiza entidad NGSI-LD
+        │    urn:ngsi-ld:Device:002
+        │    attributes: temperature, lat, lon, hour
+        │
+        │ 5. Notifica a QuantumLeap (suscripción NGSI-v2)
+        ▼
+┌──────────────────┐
+│ QuantumLeap      │
+│ (http://quantumleap:8668) │
+└───────┬───────────┘
+        │
+        │ 6. Persiste datos históricos en CrateDB
+        ▼
+┌──────────────────┐
+│   CrateDB        │
+│ (Tabla: doc.etdevice) │
+└──────────────────┘

@@ -53,10 +53,12 @@ def download_data(**context):
                 output_file
             )
             context["ti"].xcom_push(key="data_file", value=output_file)
+            print("\n Tenemos datos para el día: ",date)
             return
         except Exception:
+            print("\n No hay datos para el día: ",date,"Retrocediendo un día")
             continue
-    raise ValueError("No se encontraron datos en los últimos 10 días")
+    raise ValueError("\n No se encontraron datos en los últimos 10 días")
 
 def parse_data(**context):
     file = context["ti"].xcom_pull(key="data_file", task_ids="download_data")
@@ -183,7 +185,7 @@ def check_quantumleap(**_):
 
 # ========= DAG ========= #
 with DAG(
-    dag_id="flujo_copernicus_orion_modular",
+    dag_id="copernicus_orion_quantumleap",
     start_date=pendulum.datetime(2025, 9, 4, tz="UTC"),
     schedule="0 * * * *",
     catchup=False,
