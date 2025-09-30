@@ -40,7 +40,7 @@
   <p align="center">
     A data platform that periodically retrieves climate and weather historical data and predictions from multiple APIs, standardizes them using Smart Data Models and stores them in a FIWARE Context Broker with historical persistence for machine learning and deep learning models
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>See the web page »</strong></a>
+    <a href="https://pgtec.webs.upv.es/"><strong>See the web page »</strong></a>
     <br />
     <!--<br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>

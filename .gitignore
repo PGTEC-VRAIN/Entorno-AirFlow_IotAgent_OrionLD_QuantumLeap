@@ -23,7 +23,7 @@ __pycache__/
 # VS Code
 .vscode/
 
-.grafana/
-.images/
-.data/crate/
-.Best-README-Template/
+grafana/
+images/
+data/crate/
+Best-README-Template/
