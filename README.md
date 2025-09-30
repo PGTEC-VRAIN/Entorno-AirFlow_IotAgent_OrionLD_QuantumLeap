@@ -32,7 +32,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/PGTEC-VRAIN/Entorno-AirFlow_IotAgent_OrionLD_QuantumLeap/blob/main/">
-    <img src="logo_PGTEC.png" alt="Logo" width="80" height="80">
+    <img src="./images/logo_PGTEC.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">FIWARE Data environment</h3>
@@ -79,8 +79,6 @@
     <li><a href="#references">References</a></li>
   </ol>
 </details>
-
-[![](https://mermaid.ink/img/pako:eNpVjcFugkAQhl9lM6c2QdNVIusemlRsvZi0B08FDxMZWaLskmWJtcC7d8E0tXOayff9_7RwMBmBhOPZXA4KrWO7daqZn5ckVraoXYn1nk0mz92GHCuNpmvHVg8bw2plqqrQ-ePNXw0Si9vtoBFzqtCn_obiMf-uqWPrZIuVM9X-nuwupmOvSfGhfP1_oiz51FtyRHnEyQEti9GOCgSQ2yID6WxDAZRkSxxOaAeaglNUUgrSrxnaUwqp7n2mQv1pTPkbs6bJFfjuc-2vpsrQ0brA3OKfQjojG5tGO5A8GitAtvAFcr6YT8WSRzwUEX_icx7AFWQoplG4XEahEIvZbMZFH8D3-PNpKgZyN_0PKld1vg?type=png)](https://mermaid.live/edit#pako:eNpVjcFugkAQhl9lM6c2QdNVIusemlRsvZi0B08FDxMZWaLskmWJtcC7d8E0tXOayff9_7RwMBmBhOPZXA4KrWO7daqZn5ckVraoXYn1nk0mz92GHCuNpmvHVg8bw2plqqrQ-ePNXw0Si9vtoBFzqtCn_obiMf-uqWPrZIuVM9X-nuwupmOvSfGhfP1_oiz51FtyRHnEyQEti9GOCgSQ2yID6WxDAZRkSxxOaAeaglNUUgrSrxnaUwqp7n2mQv1pTPkbs6bJFfjuc-2vpsrQ0brA3OKfQjojG5tGO5A8GitAtvAFcr6YT8WSRzwUEX_icx7AFWQoplG4XEahEIvZbMZFH8D3-PNpKgZyN_0PKld1vg)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
