@@ -24,6 +24,5 @@ __pycache__/
 .vscode/
 
 grafana/
-images/
 data/crate/
 Best-README-Template/
