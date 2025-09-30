@@ -81,11 +81,10 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Platform for the Management of Early Prevention of Climate Emergencies][product-screenshot]](./images/proyecto.png)
+![Platform for the Management of Early Prevention of Climate Emergencies](./images/proyecto.png)
 
 This repository is part of the tasks of the <a href="https://pgtec.webs.upv.en/">PGTEC</a> project.
 Its main objective is to describe and provide the infrastructure required to deploy a data space using <a href="">FIWARE</a> technology, offering a detailed and easy-to-follow guide for different environments.
@@ -111,40 +110,36 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Tested on
+
 <div align="center">
+
   | <!-- -->                                  | 
   |:-----------------------------------------:|
-  | [![Ubuntu 24.04.1 LTS][ubuntu]][ubuntu-url]  | 
+  | [![ubuntu22.04.03LTS][ubuntu]][ubuntu-url]  | 
 </div>
 
 <!-- GETTING STARTED -->
-## Getting Started 
+### Getting Started 
+
 
 This repository provides a complete environment for IoT data orchestration and management using the following components:
 
 🔹 Main Components
 
-Apache Airflow: Workflow orchestration (DAGs) to automate processes.
-
-IoT Agent: Interface to receive data from IoT devices and forward it to the appropriate context.
-
-Orion-LD: Context management engine based on NGSI-LD.
-
-QuantumLeap: Service for historical storage of events and time-series data for analysis.
+- **Apache Airflow**: Workflow orchestration (DAGs) to automate processes.
+- **IoT Agent**: Interface to receive data from IoT devices and forward them to the appropriate context.
+- **Orion-LD**: Context management engine based on NGSI-LD.
+- **QuantumLeap**: Service for historical storage of events and time-series data for analysis.
 
 🔹 Repository Contents
 
-docker-compose.yml → Configuration of all services and containers.
+- **docker-compose.yml** → Configuration of all services and containers.
+- **dags/** → Directory containing Airflow DAGs:
+  - `AEMET.py` → Retrieves data from the AEMET API and downloads it.
+  - `Copernicus.py` → Retrieves Copernicus data for the province of Valencia via the Python CDSAPI.
+  - `Flujo_Copernicus_orion.py` → DAG that accesses Copernicus data via API, registers it through the IoT Agent, and stores it in the Orion-LD context broker.
+  - `Flujo_copernicus_orion_quantumleap.py` → Improved version of the previous DAG, adding QuantumLeap for historical data storage using CrateDB (recommended DAG to run).
 
-dags/ → Directory containing Airflow DAGs.
-
-AEMET.py: Retrieves data from the AEMET API and downloads it.
-
-Copernicus.py: Retrieves Copernicus data for the province of Valencia via the Python CDSAPI.
-
-Flujo_Copernicus_orion.py: DAG that accesses Copernicus data via API, registers it through the IoT Agent, and stores it in the Orion-LD context broker.
-
-Flujo_copernicus_orion_quantumleap.py: Improved version of the previous DAG, adding QuantumLeap for historical data storage using CrateDB (recommended DAG to run).
 
 ### Prerequisites
 
