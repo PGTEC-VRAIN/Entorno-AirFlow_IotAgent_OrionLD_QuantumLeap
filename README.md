@@ -156,7 +156,7 @@ These are the necessary requirements to be able to execute the project:
 | [Airflow](https://airflow.apache.org/) | Docker container  |
 | [IoT Agent-UL](https://fiware-tutorials.readthedocs.io/en/latest/iot-agent.html) | Docker container  |
 | [Orion-LD Context Broker](https://fiware-orion.readthedocs.io/) | Docker container |
-| [QuantumLeap](https://quantumleap.readthedocs.io/) | Docker container / CrateDB backend  |
+| [QuantumLeap](https://quantumleap.readthedocs.io/) | Docker container / CreateDB backend  |
 
 ### Cheatsheet
 
@@ -250,7 +250,7 @@ Follow the next steps:
 
     ![Airflow](./images/airflow.png)
 
-8. Check CrateDB to get historical data
+8. Check CreateDB to get historical data
     _You may create an account first_
 
     [CrateDB Dashboard](http://localhost:4200)
