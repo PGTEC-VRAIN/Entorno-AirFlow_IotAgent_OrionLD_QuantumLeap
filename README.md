@@ -243,14 +243,14 @@ Follow the next steps:
    docker ps # see if containers are healthy
    ```
 
-7. Access to airflow to see the DAG running:
+8. Access to airflow to see the DAG running:
     _You may create an account first_
 
     [Airflow Dashboard](http://localhost:8080)
 
     ![Airflow](./images/airflow.png)
 
-8. Check CreateDB to get historical data
+9. Check CreateDB to get historical data
     _You may create an account first_
 
     [CrateDB Dashboard](http://localhost:4200)
@@ -259,7 +259,7 @@ Follow the next steps:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
-9. Shut down the docker 
+10. Shut down the docker 
    ```bash
    docker compose down
    ```
